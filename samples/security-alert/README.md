@@ -1,12 +1,12 @@
-# Yammer Live Events
+# Security Alert
 
 ## Summary
 
-Simple card designed to show a list of upcoming organisation Yammer live events.
+Simple card designed to show a security alert for a building e.g. a Fire Alarm test or an increase in bag checks. 
 
 The Data JSON option has been leveraged to enable users without advanced knowledge of JSON to easily add event items to the card. 
 
-Users can simply update the data JSON to change the events listed and easily add more.
+Users can simply update the data JSON to change the details of the alert.
 
 ![picture of the extension in action](assets/card.png)
 
@@ -37,14 +37,14 @@ Steps to configure this card with *Card designer* as follows:
 - Add **Card designer** to the Viva Connections Dashboard
 - **Template Type** - Description
 - **Card size** - Large
-- **Title** - *Upcoming Live Events*
+- **Title** - *Security Alerts*
 - **Icon** - Icon with the preferred selection
-- **Heading** - *Upcoming Live Events*
-- **Description** - See all of our upcoming live events. 
+- **Heading** - *Security Alert*
+- **Description** - We will have increased bag checks in the office today.
 - **Card action** - Show the quick view
 - **Primary Button** - On
-- **Primary Button Title** - *View Events*
+- **Primary Button Title** - *View alert*
 - **Primary Button Action** - Show the quick view
 - **Secondary Button** - Off
-- **Template JSON** - Paste in the content of the *liveevents-qv-json* file
-- **Data JSON** - Paste in the content of the *liveevents-data-json* file
+- **Template JSON** - Paste in the content of the *securityalert-qv-json* file
+- **Data JSON** - Paste in the content of the *securityalert-data-json* file
