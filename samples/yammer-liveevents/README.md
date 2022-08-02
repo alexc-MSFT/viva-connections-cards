@@ -6,7 +6,7 @@ Simple card designed to show a list of upcoming organisation Yammer live events.
 
 The Data JSON option has been leveraged to enable users without advanced knowledge of JSON to easily add event items to the card. 
 
-Users can simply update the data JSON to change the events listed and easily add more.
+The data JSON uses an array of event objects that are displayed in the card. Simply update the array with the events you wish to display.
 
 ![picture of the extension in action](assets/card.png)
 

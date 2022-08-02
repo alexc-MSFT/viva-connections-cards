@@ -1,6 +1,6 @@
 {
-    "schema": "http=//adaptivecards.io/schemas/adaptive-card.json",
     "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.3",
     "body": [
         {
@@ -8,13 +8,13 @@
             "columns": [
                 {
                     "type": "Column",
-                    "width": "auto",
+                    "width": "30px",
                     "items": [
                         {
                             "type": "Image",
+                            "url": "https://th.bing.com/th/id/OIP.Ra99SnP67XVMTQgNGk4grwHaHa?pid=ImgDet&rs=1",
                             "width": "30px",
-                            "size": "Small",
-                            "url": "https://th.bing.com/th/id/OIP.Ra99SnP67XVMTQgNGk4grwHaHa?pid=ImgDet&rs=1"
+                            "size": "Small"
                         }
                     ]
                 },
@@ -26,11 +26,9 @@
                             "type": "TextBlock",
                             "text": "Upcoming Live Events",
                             "wrap": true,
-                            "horizontalAlignment": "Left",
-                            "fontType": "Default",
-                            "weight": "Bolder",
                             "size": "Large",
-                            "spacing": "ExtraLarge"
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder"
                         }
                     ]
                 }
@@ -40,24 +38,37 @@
             "type": "TextBlock",
             "text": "View our upcoming events below and click to join.",
             "wrap": true,
-            "horizontalAlignment": "Left",
-            "fontType": "Default"
+            "spacing": "Medium"
         },
         {
-            "type": "Container",
-            "spacing": "Medium",
-            "style": "emphasis",
-            "items": [
+            "type": "Container"
+        },
+        {
+            "type": "ColumnSet",
+            "$data": "${$root.events}",
+            "columns": [
                 {
-                    "type": "TextBlock",
-                    "text": "${event1Title}",
-                    "wrap": true,
-                    "weight": "Bolder",
-                    "size": "Medium"
-                },
-                {
-                    "type": "Container",
+                    "type": "Column",
+                    "width": 75,
                     "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${title}",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "size": "Medium"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${date}",
+                            "wrap": true,
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${description}",
+                            "wrap": true
+                        },
                         {
                             "type": "ColumnSet",
                             "columns": [
@@ -66,98 +77,38 @@
                                     "width": "stretch",
                                     "items": [
                                         {
-                                            "type": "TextBlock",
-                                            "text": "${event1Date}",
-                                            "wrap": true,
-                                            "weight": "Bolder"
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "${event1Description}",
-                                            "wrap": true
+                                            "type": "ActionSet",
+                                            "actions": [
+                                                {
+                                                    "type": "Action.OpenUrl",
+                                                    "title": "Join Event",
+                                                    "url": "${link}"
+                                                }
+                                            ]
                                         }
                                     ]
-                                },
-                                {
-                                    "type": "Column",
-                                    "width": "80px",
-                                    "minHeight": "80px",
-                                    "backgroundImage": {
-                                        "url": "${event1ImageUrl}"
-                                    }
                                 }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "ActionSet",
-                    "actions": [
-                        {
-                            "type": "Action.OpenUrl",
-                            "title": "Join Event",
-                            "url": "${event1Link}"
+                            ],
+                            "spacing": "Small"
                         }
                     ],
-                    "spacing": "Medium"
-                }
-            ]
-        },
-        {
-            "type": "Container",
-            "spacing": "Medium",
-            "style": "emphasis",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "${event2Title}",
-                    "wrap": true,
-                    "size": "Medium",
-                    "weight": "Bolder"
+                    "verticalContentAlignment": "Center"
                 },
                 {
-                    "type": "TextBlock",
-                    "text": "${event2Date}",
-                    "wrap": true,
-                    "weight": "Bolder"
-                },
-                {
-                    "type": "ColumnSet",
-                    "columns": [
+                    "type": "Column",
+                    "width": "80px",
+                    "items": [
                         {
-                            "type": "Column",
-                            "width": "stretch",
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "text": "${event2Description}",
-                                    "wrap": true
-                                }
-                            ]
-                        },
-                        {
-                            "type": "Column",
+                            "type": "Image",
+                            "url": "${imageUrl}",
                             "width": "80px",
-                            "minHeight": "80px",
-                            "backgroundImage": {
-                                "url": "${event2ImageUrl}"
-                            }
+                            "height": "80px"
                         }
                     ]
-                },
-                {
-                    "type": "ActionSet",
-                    "actions": [
-                        {
-                            "type": "Action.OpenUrl",
-                            "title": "Join Event",
-                            "url": "${event2Link}"
-                        }
-                    ],
-                    "spacing": "Medium"
                 }
-            ]
+            ],
+            "spacing": "Medium",
+            "separator": true
         }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+    ]
 }
