@@ -18,7 +18,7 @@ Users can simply update the data JSON to change the details of the alert.
 ## Designer
 
 <p>
-    <a href="https://adaptivecards.io/designer/index.html?card=https://raw.githubusercontent.com/alexc-MSFT/viva-connections-cards/main/samples/security-alert/securityalert-qv-json.json">
+    <a href="https://adaptivecards.io/designer/index.html?card=https://raw.githubusercontent.com/alexc-MSFT/viva-connections-cards/main/samples/security-alert/securityalert-qv-json.json&data=https://raw.githubusercontent.com/alexc-MSFT/viva-connections-cards/main/samples/security-alert/securityalert-data-json">
         <img src="https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/assets/btn-open-in-designer.png" alt="Open in Adaptive Card Designer" />
     </a>
 </p>
