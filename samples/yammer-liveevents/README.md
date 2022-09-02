@@ -18,7 +18,7 @@ The data JSON uses an array of event objects that are displayed in the card. Sim
 ## Designer
 
 <p>
-    <a href="https://adaptivecards.io/designer/index.html?card=https://raw.githubusercontent.com/alexc-MSFT/viva-connections-cards/main/samples/yammer-liveevents/liveevents-qv-json">
+    <a href="https://adaptivecards.io/designer/index.html?card=https://raw.githubusercontent.com/alexc-MSFT/viva-connections-cards/main/samples/yammer-liveevents/liveevents-qv-json.json&data=https://raw.githubusercontent.com/alexc-MSFT/viva-connections-cards/main/samples/yammer-liveevents/liveevents-data-json.json">
         <img src="https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/assets/btn-open-in-designer.png" alt="Open in Adaptive Card Designer" />
     </a>
 </p>
